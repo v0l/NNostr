@@ -24,7 +24,7 @@ jobs:
         with:
           PROJECT_FILE_PATH: NNostr.Client/NNostr.Client.csproj
           NUGET_SOURCE: "https://nuget.pkg.github.com/v0l"
-          NUGET_KEY: ${{secrets.GH_TOKEN}}
+          NUGET_KEY: ${{ secrets.GITHUB_TOKEN }}
           PACKAGE_NAME: NNostr.Client
           INCLUDE_SYMBOLS: false
           VERSION_REGEX: ^\s*<PackageVersion>(.*)<\/PackageVersion>\s*$

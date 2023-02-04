@@ -1,7 +1,4 @@
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -18,7 +15,9 @@ namespace NNostr.Client
         public string EventId { get; set; }
         public string TagIdentifier { get; set; }
         public List<string> Data { get; set; } = new();
-        [JsonIgnore] public NostrEvent Event { get; set; }
+
+        [JsonIgnore]
+        public NostrEvent Event { get; set; }
 
         public override string ToString()
         {
